@@ -1,0 +1,31 @@
+tintin@sayar-ghosh-roy:~/Documents/3_sem/operating_Systems/20171047_asn4$ time ./3a < input.txt > sample_op_3a.txt
+
+real	0m0.089s
+user	0m0.088s
+sys	0m0.000s
+
+
+tintin@sayar-ghosh-roy:~/Documents/3_sem/operating_Systems/20171047_asn4$ time ./3b < input.txt > sample_op_3b.txt
+
+real	0m0.408s
+user	0m1.370s
+sys	0m0.172s
+
+
+tintin@sayar-ghosh-roy:~/Documents/3_sem/operating_Systems/20171047_asn4$ time ./3c < input.txt > sample_op_3c.txt
+
+real	0m0.322s
+user	0m0.080s
+sys	0m0.593s
+
+
+The 3 merge sort codes were run on an array of size 10000.
+
+The times taken by each code has been shown.
+
+Clearly, Normal Merge Sort takes the least time followed by Concurrent Merge Sort using Threads followed by Merge Sort with child processes.
+
+My machine had process creation errors while trying to run merge sort with child processes on arrays of size > 10^5.
+
+The 3 sample output files and the sample input made using make_input.py has been provided.
+

@@ -1,0 +1,22 @@
+1.c : Code for question 1, compiles into 1
+
+2.c : Code for question 2, compiles into 2
+
+3a.c : Code for Normal Merge Sort, compiles into 3a, prints results into 3a_op.txt
+
+3b.c : Code for Merge Sort with child processes, compiles into 3b, prints results into 3b_op.txt
+
+3c.c : Code for Multithreaded Merge Sort, compiles into 3c, prints results into 3c_op.txt
+
+Run "make all" to produce all executables.
+
+You can use "python make_data.py" to create an input file "input.txt" to test the merge sort codes.
+
+Implementation Idea:
+
+Problem 1:
+Each person is a thread. Functionalityof the organizer achieved using separate state variables. Generate people, assign whther player or referee, make threads which sequentially call the functions. The states of each player and referee are maintained and these are used for the conditional waits.
+
+Problem 2:
+Functions are exactly the same as asked for. The structs have created a database like schema. Threads exist for booths, evms and voters. The booth_operates selects an evm, and allows voters waiting in the queue to get in. It also checks for completion of voting in that particular booth. booth_done handles the completion and exit states for each booth.
+sleep() statements have been used to simulate the voting process.
